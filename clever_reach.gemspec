@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "cleverreach/version"
+require "clever_reach/version"
 
 Gem::Specification.new do |s|
-  s.name        = "cleverreach"
-  s.version     = Cleverreach::VERSION
+  s.name        = "clever_reach"
+  s.version     = CleverReach::VERSION
   s.authors     = ["Stephan Schubert"]
   s.email       = ["stephan@frozencherry.de"]
   s.homepage    = ""
   s.summary     = %q{TODO: Write a gem summary}
   s.description = %q{TODO: Write a gem description}
 
-  s.rubyforge_project = "cleverreach"
+  s.rubyforge_project = "clever_reach"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Cleverreach do
+describe CleverReach do
 
-  let(:klass) { Cleverreach }
+  let(:klass) { CleverReach }
 
   it "should have a VERSION" do
     klass::VERSION.should_not be_nil

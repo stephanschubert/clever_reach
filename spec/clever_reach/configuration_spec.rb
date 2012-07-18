@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Cleverreach::Configuration do
+describe CleverReach::Configuration do
 
-  let(:klass) { Cleverreach::Configuration }
+  let(:klass) { CleverReach::Configuration }
 
   it "should be a singleton" do
     klass.included_modules.should include(Singleton)

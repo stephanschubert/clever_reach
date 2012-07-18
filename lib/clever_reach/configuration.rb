@@ -1,6 +1,6 @@
 require 'singleton'
 
-module Cleverreach
+module CleverReach
   class Configuration
     include Singleton
   end
