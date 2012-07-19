@@ -15,6 +15,7 @@ describe CleverReach::ResponseDecorator do
             :company => "avianta UG",
             :email => "stephan@frozencherry.de",
             :login_domain => "12345.cleverreach.com",
+            :item => { :foo => "1", :"@xsi:type" => "foo" },
             :"@xsi:type" => "tns:clientData"
           },
           :"@xsi:type" => "tns:returnClient" },
@@ -35,7 +36,8 @@ describe CleverReach::ResponseDecorator do
         name: "Schubert",
         company: "avianta UG",
         email: "stephan@frozencherry.de",
-        login_domain: "12345.cleverreach.com"
+        login_domain: "12345.cleverreach.com",
+        item: { foo: "1" }
       }
     end
 
