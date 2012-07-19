@@ -1,8 +1,9 @@
 require "clever_reach/version"
 
 module CleverReach
-  autoload :Configuration, 'clever_reach/configuration'
-  autoload :Client, 'clever_reach/client'
+  autoload :Base,              'clever_reach/base'
+  autoload :Configuration,     'clever_reach/configuration'
+  autoload :ResponseDecorator, 'clever_reach/response_decorator'
 
   def self.config
     Configuration.instance

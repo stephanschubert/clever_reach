@@ -12,7 +12,7 @@ describe CleverReach::Configuration do
 
     let(:defaults) do
       {
-        wsdl_url: 'http://api.cleverreach/soap/interface_v5.1.php?wsdl'
+        wsdl_url: 'http://api.cleverreach.com/soap/interface_v5.1.php?wsdl'
       }
     end
 

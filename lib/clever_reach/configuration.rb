@@ -5,10 +5,10 @@ module CleverReach
     include Singleton
 
     @@defaults = {
-      wsdl_url: 'http://api.cleverreach/soap/interface_v5.1.php?wsdl'
+      wsdl_url: 'http://api.cleverreach.com/soap/interface_v5.1.php?wsdl'
     }
 
-    attr_accessor :wsdl_url
+    attr_accessor :wsdl_url, :api_key
 
     def self.defaults
       @@defaults
