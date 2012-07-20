@@ -39,6 +39,11 @@ describe CleverReach::Base do
   #
   #      https://github.com/rubiii/savon/issues/307
   #
+  # it "blah" do
+  #   savon.expects(:client_get_details).with('apiKey' => api_key).returns({})
+  #   subject.client_get_details
+  # end
+
   # describe "A request" do # --------------------------------
 
   #   it "should return a ResponseDecorator" do
