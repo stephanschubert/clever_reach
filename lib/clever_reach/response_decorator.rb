@@ -2,6 +2,7 @@ module CleverReach
   class ResponseDecorator < SimpleDelegator
 
     def initialize(response)
+      super(response)
       @response = response
     end
 
