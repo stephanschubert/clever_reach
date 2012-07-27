@@ -5,7 +5,7 @@ module CleverReach
     class BaseError < StandardError
     end
 
-    class InvalidAPIKey < BaseError;
+    class InvalidAPIKey < BaseError
       def initialize
         super('invalid API key')
       end
