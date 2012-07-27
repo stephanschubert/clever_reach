@@ -102,8 +102,8 @@ module CleverReach
       80  => BatchTooBig,
       90  => SubscriberAlreadyInactive,
       100 => GivenEmailIsTooShort,
-      110	=> NoFormsAvailable,
-      120	=> ErrorSavingFilter,
+      110 => NoFormsAvailable,
+      120 => ErrorSavingFilter,
     }
 
     def self.lookup(code)
