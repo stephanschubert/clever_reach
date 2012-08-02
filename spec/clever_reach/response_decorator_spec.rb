@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe CleverReach::ResponseDecorator do
 
-  let(:subject) { CleverReach::ResponseDecorator }
-
   let(:body) do
     { :client_get_details_response => {
         :return => {
@@ -26,18 +24,21 @@ describe CleverReach::ResponseDecorator do
     }
   end
 
-  it "should delegate missing methods" do
-    deco = subject.new(%w(test))
-    deco.size.should == 1
+  let(:response) { stub(body: body) }
+  let(:subject)  { CleverReach::ResponseDecorator.new(response) }
+
+  describe "Method Delegation" do # ------------------------
+    let(:response) { stub(body: body, foo: 1) }
+
+    it "should check the underlying object" do
+      subject.foo.should == 1
+    end
   end
 
   describe "#to_hash" do # ----------------------------------
 
     it "should return a cleaned hash with just the valuable data" do
-      resp = stub(body: body)
-      deco = subject.new(resp)
-
-      deco.to_hash.should == {
+      subject.to_hash.should == {
         id: "12345",
         firstname: "Stephan",
         name: "Schubert",
