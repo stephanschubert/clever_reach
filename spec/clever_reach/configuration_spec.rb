@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe CleverReach::Configuration do
 
-  let(:klass) { CleverReach::Configuration }
+  let(:klass)   { CleverReach::Configuration }
+  let(:subject) { CleverReach.config }
 
   it "should be a singleton" do
     klass.included_modules.should include(Singleton)
@@ -21,10 +22,22 @@ describe CleverReach::Configuration do
     end
 
     it "should use the default settings automatically" do
-      config = CleverReach.config
-      keys   = config.instance_variables.map { |name| name.to_s.sub('@', '').to_sym }
-
+      keys = subject.instance_variables.map { |name| name.to_s.sub('@', '').to_sym }
       keys.should include(*defaults.keys)
+    end
+
+  end
+
+  describe "Specifying a list id" do
+
+    before :each do
+      CleverReach.configure do |config|
+        config.list_id = '123'
+      end
+    end
+
+    it "should be readable" do
+      subject.list_id.should == '123'
     end
 
   end
