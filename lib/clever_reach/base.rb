@@ -13,16 +13,23 @@ module CleverReach
     end
 
     def method_missing(name, *args)
-      options = args.last.is_a?(Hash) ? args.pop : {}
+      options  = args.last.is_a?(Hash) ? args.pop : {}
+      response = request(name, options)
 
+      ResponseDecorator.new(response).tap do |r|
+        raise Errors.lookup(r.status_code) unless r.valid?
+      end
+    end
+
+    private # ----------------------------------------------
+
+    def request(method_name, body)
       # The 'apiKey' MUST come first in the *ordered* hash.
-      body = { 'apiKey' => @api_key }.merge(options)
+      body = { 'apiKey' => @api_key }.merge(body)
 
-      resp = client.request(name) do
+      client.request(method_name) do
         soap.body = body
       end
-
-      ResponseDecorator.new(resp)
     end
 
   end
