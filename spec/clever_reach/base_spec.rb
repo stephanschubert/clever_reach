@@ -34,6 +34,24 @@ describe CleverReach::Base do
 
   end
 
+  describe "Response w/ errors" do # -----------------------
+
+    let(:body_with_errors) do
+      { :foo_response => { :return => { :status => 'ERROR', :statuscode => '30' } } }
+    end
+
+    let(:response) { stub(body: body_with_errors) }
+
+    before :each do
+      subject.should_receive(:request).with(:foo, anything).and_return(response)
+    end
+
+    it "should raise the appropiate error" do
+      lambda { subject.foo }.should raise_error(CleverReach::Errors::EmailInvalid)
+    end
+
+  end
+
   # TODO Can't figure out how to stub/mock requests for Savon.
   #      I'v opened a new issue on github asking for some documentation.
   #

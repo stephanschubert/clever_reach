@@ -51,4 +51,27 @@ describe CleverReach::ResponseDecorator do
 
   end
 
+  describe "Response w/o errors" do # ----------------------
+    it { should be_valid }
+
+    it "should have status code 0" do
+      subject.status_code.should be_zero
+    end
+  end
+
+  describe "Response w/ errors" do # -----------------------
+    let(:body) do
+      { :some_method_response => {
+          :return => { :status => 'ERROR', :statuscode => '40' }
+        }
+      }
+    end
+
+    it { should_not be_valid }
+
+    it "should have a non-zero status code" do
+      subject.status_code.should_not be_zero
+    end
+  end
+
 end
