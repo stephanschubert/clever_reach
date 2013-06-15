@@ -1,10 +1,10 @@
-clever_reach
-============
+# clever_reach
 
 Ruby bindings for CleverReach's API
 
-Installation
-------------
+[![Code Climate](https://codeclimate.com/github/jazen/clever_reach.png)](https://codeclimate.com/github/jazen/clever_reach)
+
+## Installation
 
 clever_reach is WORK IN PROGRESS and not yet available on Rubygems.
 But you can try it out using Bundler:
@@ -13,8 +13,7 @@ But you can try it out using Bundler:
 gem 'clever_reach', git: 'git://github.com/jazen/clever_reach.git'
 ```
 
-Introduction
-------------
+## Introduction
 
 ``` ruby
 require 'clever_reach'
