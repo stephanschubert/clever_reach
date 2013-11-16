@@ -6,11 +6,10 @@ Ruby bindings for CleverReach's API
 
 ## Installation
 
-clever_reach is WORK IN PROGRESS and not yet available on Rubygems.
-But you can try it out using Bundler:
+In your Gemfile:
 
 ``` ruby
-gem 'clever_reach', git: 'git://github.com/jazen/clever_reach.git'
+gem 'clever_reach'
 ```
 
 ## Introduction

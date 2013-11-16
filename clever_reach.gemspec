@@ -7,9 +7,10 @@ Gem::Specification.new do |s|
   s.version     = CleverReach::VERSION
   s.authors     = ["Stephan Schubert"]
   s.email       = ["stephan@frozencherry.de"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/jazen/clever_reach"
+  s.summary     = "Ruby bindings for CleverReach's API"
+  s.description = "Ruby bindings for CleverReach's API"
+  s.licenses    = %w(MIT)
 
   s.rubyforge_project = "clever_reach"
 
