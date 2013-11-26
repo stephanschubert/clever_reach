@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/jazen/clever_reach.png?label=ready)](https://waffle.io/jazen/clever_reach)  
 # clever_reach
 
 Ruby bindings for CleverReach's API
