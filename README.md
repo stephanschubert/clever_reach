@@ -2,6 +2,7 @@
 
 Ruby bindings for CleverReach's API
 
+[![Stories in Ready](https://badge.waffle.io/jazen/clever_reach.png?label=ready)](http://waffle.io/jazen/clever_reach)
 [![Code Climate](https://codeclimate.com/github/jazen/clever_reach.png)](https://codeclimate.com/github/jazen/clever_reach)
 
 ## Installation
